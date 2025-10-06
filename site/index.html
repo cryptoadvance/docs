@@ -52,6 +52,38 @@
   color: #FF7A7A;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #192432;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #289DB8;
+  color: white;
+}
+
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -86,7 +118,7 @@ body {
   <nav class="nav-container">
     <div class="nav-logo">
       <a href="https://specter.solutions/">
-        <img src="https://specter.solutions/wp-content/uploads/2020/09/SpecterSolutions_Logo@2x.png" alt="Specter Solutions">
+        <img src="/assets/Specter_logo_1756046218246-Cuyd3_u2.png" alt="Specter Solutions">
       </a>
     </div>
     
@@ -95,7 +127,13 @@ body {
       <li><a href="https://specter.solutions/desktop">Desktop</a></li>
       <li><a href="https://specter.solutions/hardware">Hardware</a></li>
       <li><a href="https://specter.solutions/contact">Contact</a></li>
-      <li><a href="https://docs.specter.solutions">Docs</a></li>
+      <li class="dropdown">
+        <a href="#">Docs</a>
+        <div class="dropdown-content">
+          <a href="https://docs.specter.solutions/diy/">DIY Docs</a>
+          <a href="https://docs.specter.solutions/desktop/">Desktop Docs</a>
+        </div>
+      </li>
     </ul>
     
     <button class="mobile-menu-toggle">☰</button>
