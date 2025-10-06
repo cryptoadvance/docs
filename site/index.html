@@ -112,6 +112,75 @@ body {
   background-color: #0b0f15;
   color: white;
 }
+
+.hero-section {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  color: #FF7A7A;
+  line-height: 1.2;
+}
+
+.docs-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.docs-button {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: #289DB8;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid #289DB8;
+}
+
+.docs-button:hover {
+  background-color: transparent;
+  color: #289DB8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 157, 184, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+</style>}
 </style>
 </head>
 
@@ -143,9 +212,21 @@ body {
 </header>
 
 <main>
-  <!-- Your docs content goes here -->
-  <h1>Specter Documentation</h1>
-  <p>Welcome to the Specter documentation site.</p>
+  <div class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">OPEN-SOURCE PRODUCT SUITE</h1>
+      <h2 class="hero-subtitle">For Bitcoiners, Hodlers<br>& Developers</h2>
+      
+      <div class="docs-buttons">
+        <a href="https://docs.specter.solutions/desktop/" class="docs-button">
+          Documentation for Specter Desktop
+        </a>
+        <a href="https://docs.specter.solutions/diy/" class="docs-button">
+          Documentation for Specter DIY
+        </a>
+      </div>
+    </div>
+  </div>
 </main>
 
 </body>
